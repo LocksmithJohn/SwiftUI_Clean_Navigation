@@ -11,7 +11,7 @@ import SwiftUI
 struct TasksScreen: View {
     
     @EnvironmentObject var viewStack: ViewStack
-    @Environment(\.injected) private var injected: DIContainer
+    @Environment(\.injected) private var injected: Container
     @State var tasksNames: [String] = []
     
     private var bag = Set<AnyCancellable>()
@@ -35,7 +35,7 @@ struct TasksScreen: View {
         }
         .font(.headline)
         .padding()
-        .modifier(NavigationModifier(
+        .modifier(NavigationBarModifier(
             title: "Taski",
             rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
             rightButtonAction: { viewStack.send(.push(.projects)) })

@@ -8,12 +8,16 @@
 import Foundation
 
 class ViewStack: ObservableObject {
+    
     @Published private (set) var screens: [Screen] = [] {
         didSet { printStactInfo() }
     }
     
     func send(_ action: StackAction) {
         switch action {
+        case .set(let types):
+            screens.removeAll()
+            addScreens(types)
         case .push(let type):
             guard !exists(type) else { return }
             addScreen(type)
@@ -31,6 +35,12 @@ class ViewStack: ObservableObject {
         case .pop:
             guard !screens.isEmpty else { return }
             screens.removeLast()
+        }
+    }
+    
+    private func addScreens(_ types: [SType]) {
+        types.forEach {
+            addScreen($0)
         }
     }
     

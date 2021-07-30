@@ -7,32 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1152C226ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */; };
-		CE1152C326ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */; };
+		CE1152C226ACBECB0076C4F7 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C126ACBECB0076C4F7 /* NavigationBar.swift */; };
+		CE1152C326ACBECB0076C4F7 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C126ACBECB0076C4F7 /* NavigationBar.swift */; };
 		CE1152C626ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */; };
 		CE1152C726ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */; };
 		CE7207FE26A6FF9B00687D32 /* StackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7207FD26A6FF9B00687D32 /* StackAction.swift */; };
 		CE7207FF26A6FF9B00687D32 /* StackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7207FD26A6FF9B00687D32 /* StackAction.swift */; };
-		CE72082D26A8CEB200687D32 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082C26A8CEB200687D32 /* NavigationStackView.swift */; };
-		CE72082E26A8CEB200687D32 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082C26A8CEB200687D32 /* NavigationStackView.swift */; };
+		CE72082D26A8CEB200687D32 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082C26A8CEB200687D32 /* NavigationController.swift */; };
+		CE72082E26A8CEB200687D32 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082C26A8CEB200687D32 /* NavigationController.swift */; };
 		CE72083026A99DB600687D32 /* ViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082F26A99DB600687D32 /* ViewStack.swift */; };
 		CE72083126A99DB600687D32 /* ViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082F26A99DB600687D32 /* ViewStack.swift */; };
 		CE72083326A99FDE00687D32 /* StackScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72083226A99FDE00687D32 /* StackScreenViewController.swift */; };
 		CE72083426A99FDE00687D32 /* StackScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72083226A99FDE00687D32 /* StackScreenViewController.swift */; };
+		CE7C732F26B4AEE1002BE638 /* TasksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C732E26B4AEE1002BE638 /* TasksNavigationController.swift */; };
+		CE7C733026B4AEE1002BE638 /* TasksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C732E26B4AEE1002BE638 /* TasksNavigationController.swift */; };
+		CE7C733226B4AF4F002BE638 /* ProjectsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733126B4AF4F002BE638 /* ProjectsNavigationController.swift */; };
+		CE7C733326B4AF4F002BE638 /* ProjectsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733126B4AF4F002BE638 /* ProjectsNavigationController.swift */; };
+		CE7C733526B4AF58002BE638 /* InboxNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733426B4AF58002BE638 /* InboxNavigationController.swift */; };
+		CE7C733626B4AF58002BE638 /* InboxNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733426B4AF58002BE638 /* InboxNavigationController.swift */; };
+		CE7C733B26B4B1A8002BE638 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733A26B4B1A8002BE638 /* NavigationBarModifier.swift */; };
+		CE7C733C26B4B1A8002BE638 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733A26B4B1A8002BE638 /* NavigationBarModifier.swift */; };
+		CE7C733E26B4B3F8002BE638 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733D26B4B3F8002BE638 /* ScreenFactory.swift */; };
+		CE7C733F26B4B3F8002BE638 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733D26B4B3F8002BE638 /* ScreenFactory.swift */; };
+		CE7C734126B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C734026B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift */; };
+		CE7C734226B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C734026B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift */; };
+		CE7C734526B4B8E7002BE638 /* EnvironmentValues+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C734426B4B8E7002BE638 /* EnvironmentValues+Extensions.swift */; };
+		CE7C734626B4B8E7002BE638 /* EnvironmentValues+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C734426B4B8E7002BE638 /* EnvironmentValues+Extensions.swift */; };
+		CE7C734826B4B95D002BE638 /* TaskInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C734726B4B95D002BE638 /* TaskInteractor.swift */; };
+		CE7C734926B4B95D002BE638 /* TaskInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C734726B4B95D002BE638 /* TaskInteractor.swift */; };
 		CED4655F26B2C320008B8705 /* InboxScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4655E26B2C320008B8705 /* InboxScreen.swift */; };
 		CED4656026B2C320008B8705 /* InboxScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4655E26B2C320008B8705 /* InboxScreen.swift */; };
 		CEE15A4126A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */; };
 		CEE15A4226A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */; };
 		CEE15A4326A45F2100CFDC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3126A45F2100CFDC19 /* ContentView.swift */; };
 		CEE15A4426A45F2100CFDC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3126A45F2100CFDC19 /* ContentView.swift */; };
-		CEE15A4526A45F2100CFDC19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3226A45F2100CFDC19 /* Persistence.swift */; };
-		CEE15A4626A45F2100CFDC19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3226A45F2100CFDC19 /* Persistence.swift */; };
 		CEE15A4726A45F2100CFDC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE15A3326A45F2100CFDC19 /* Assets.xcassets */; };
 		CEE15A4826A45F2100CFDC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE15A3326A45F2100CFDC19 /* Assets.xcassets */; };
 		CEE15A5226A45F2C00CFDC19 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5126A45F2C00CFDC19 /* AppState.swift */; };
 		CEE15A5326A45F2C00CFDC19 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5126A45F2C00CFDC19 /* AppState.swift */; };
-		CEE15A5526A4D8F900CFDC19 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */; };
-		CEE15A5626A4D8F900CFDC19 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */; };
+		CEE15A5526A4D8F900CFDC19 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5426A4D8F900CFDC19 /* Container.swift */; };
+		CEE15A5626A4D8F900CFDC19 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5426A4D8F900CFDC19 /* Container.swift */; };
 		CEE15A5826A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5726A4E7F400CFDC19 /* ProjectsScreen.swift */; };
 		CEE15A5926A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5726A4E7F400CFDC19 /* ProjectsScreen.swift */; };
 		CEE15A5B26A4E7FB00CFDC19 /* TasksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5A26A4E7FB00CFDC19 /* TasksScreen.swift */; };
@@ -42,22 +56,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		CE1152C126ACBECB0076C4F7 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		CE7207FD26A6FF9B00687D32 /* StackAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackAction.swift; sourceTree = "<group>"; };
 		CE72082B26A8C0C300687D32 /* Trening-CleanArchitecture--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Trening-CleanArchitecture--iOS--Info.plist"; sourceTree = "<group>"; };
-		CE72082C26A8CEB200687D32 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
+		CE72082C26A8CEB200687D32 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CE72082F26A99DB600687D32 /* ViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStack.swift; sourceTree = "<group>"; };
 		CE72083226A99FDE00687D32 /* StackScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenViewController.swift; sourceTree = "<group>"; };
+		CE7C732E26B4AEE1002BE638 /* TasksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksNavigationController.swift; sourceTree = "<group>"; };
+		CE7C733126B4AF4F002BE638 /* ProjectsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsNavigationController.swift; sourceTree = "<group>"; };
+		CE7C733426B4AF58002BE638 /* InboxNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxNavigationController.swift; sourceTree = "<group>"; };
+		CE7C733A26B4B1A8002BE638 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		CE7C733D26B4B3F8002BE638 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
+		CE7C734026B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrentValueSubject+Extensions.swift"; sourceTree = "<group>"; };
+		CE7C734426B4B8E7002BE638 /* EnvironmentValues+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extensions.swift"; sourceTree = "<group>"; };
+		CE7C734726B4B95D002BE638 /* TaskInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInteractor.swift; sourceTree = "<group>"; };
 		CED4655E26B2C320008B8705 /* InboxScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxScreen.swift; sourceTree = "<group>"; };
 		CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trening_CleanArchitectureApp.swift; sourceTree = "<group>"; };
 		CEE15A3126A45F2100CFDC19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CEE15A3226A45F2100CFDC19 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CEE15A3326A45F2100CFDC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEE15A3826A45F2100CFDC19 /* Trening_CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trening_CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE15A3E26A45F2100CFDC19 /* Trening_CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trening_CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE15A5126A45F2C00CFDC19 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		CEE15A5426A4D8F900CFDC19 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		CEE15A5726A4E7F400CFDC19 /* ProjectsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsScreen.swift; sourceTree = "<group>"; };
 		CEE15A5A26A4E7FB00CFDC19 /* TasksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksScreen.swift; sourceTree = "<group>"; };
 		CEE15A5E26A4E8B400CFDC19 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -91,6 +112,60 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		CE7C733726B4B0AD002BE638 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE72082C26A8CEB200687D32 /* NavigationController.swift */,
+				CE7C732E26B4AEE1002BE638 /* TasksNavigationController.swift */,
+				CE7C733126B4AF4F002BE638 /* ProjectsNavigationController.swift */,
+				CE7C733426B4AF58002BE638 /* InboxNavigationController.swift */,
+			);
+			path = NavigationControllers;
+			sourceTree = "<group>";
+		};
+		CE7C733826B4B119002BE638 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		CE7C733926B4B129002BE638 /* ViewStack */ = {
+			isa = PBXGroup;
+			children = (
+				CE7207FD26A6FF9B00687D32 /* StackAction.swift */,
+				CE72082F26A99DB600687D32 /* ViewStack.swift */,
+			);
+			path = ViewStack;
+			sourceTree = "<group>";
+		};
+		CE7C734326B4B8AF002BE638 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C734026B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift */,
+				CE7C734426B4B8E7002BE638 /* EnvironmentValues+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE7C734A26B4B98C002BE638 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C734726B4B95D002BE638 /* TaskInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		CE7C734B26B4B996002BE638 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CEE15A5126A45F2C00CFDC19 /* AppState.swift */,
+				CEE15A5426A4D8F900CFDC19 /* Container.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		CEE15A2826A45F2000CFDC19 = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +179,14 @@
 			isa = PBXGroup;
 			children = (
 				CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */,
-				CE7207FD26A6FF9B00687D32 /* StackAction.swift */,
-				CE72082F26A99DB600687D32 /* ViewStack.swift */,
+				CEE15A3126A45F2100CFDC19 /* ContentView.swift */,
+				CE7C734B26B4B996002BE638 /* Data */,
+				CE7C733926B4B129002BE638 /* ViewStack */,
+				CEE15A5D26A4E80F00CFDC19 /* Navigation */,
 				CE1152C426ACCF9B0076C4F7 /* Screens */,
-				CEE15A5D26A4E80F00CFDC19 /* Other Views */,
-				CEE15A5126A45F2C00CFDC19 /* AppState.swift */,
-				CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */,
-				CEE15A3226A45F2100CFDC19 /* Persistence.swift */,
+				CE7C733826B4B119002BE638 /* Styles */,
+				CE7C734A26B4B98C002BE638 /* Interactors */,
+				CE7C734326B4B8AF002BE638 /* Extensions */,
 				CEE15A5E26A4E8B400CFDC19 /* Models.swift */,
 				CEE15A3326A45F2100CFDC19 /* Assets.xcassets */,
 			);
@@ -126,16 +202,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEE15A5D26A4E80F00CFDC19 /* Other Views */ = {
+		CEE15A5D26A4E80F00CFDC19 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				CEE15A3126A45F2100CFDC19 /* ContentView.swift */,
 				CE72083226A99FDE00687D32 /* StackScreenViewController.swift */,
-				CE72082C26A8CEB200687D32 /* NavigationStackView.swift */,
-				CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */,
-				CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */,
+				CE7C733D26B4B3F8002BE638 /* ScreenFactory.swift */,
+				CE1152C126ACBECB0076C4F7 /* NavigationBar.swift */,
+				CE7C733A26B4B1A8002BE638 /* NavigationBarModifier.swift */,
+				CE7C733726B4B0AD002BE638 /* NavigationControllers */,
 			);
-			path = "Other Views";
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,15 +315,22 @@
 				CEE15A4126A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */,
 				CEE15A5226A45F2C00CFDC19 /* AppState.swift in Sources */,
 				CEE15A5B26A4E7FB00CFDC19 /* TasksScreen.swift in Sources */,
-				CE72082D26A8CEB200687D32 /* NavigationStackView.swift in Sources */,
+				CE72082D26A8CEB200687D32 /* NavigationController.swift in Sources */,
+				CE7C732F26B4AEE1002BE638 /* TasksNavigationController.swift in Sources */,
 				CED4655F26B2C320008B8705 /* InboxScreen.swift in Sources */,
-				CEE15A4526A45F2100CFDC19 /* Persistence.swift in Sources */,
-				CE1152C226ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */,
-				CEE15A5526A4D8F900CFDC19 /* DIContainer.swift in Sources */,
+				CE7C733526B4AF58002BE638 /* InboxNavigationController.swift in Sources */,
+				CE1152C226ACBECB0076C4F7 /* NavigationBar.swift in Sources */,
+				CEE15A5526A4D8F900CFDC19 /* Container.swift in Sources */,
+				CE7C733B26B4B1A8002BE638 /* NavigationBarModifier.swift in Sources */,
+				CE7C734526B4B8E7002BE638 /* EnvironmentValues+Extensions.swift in Sources */,
+				CE7C734126B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift in Sources */,
 				CEE15A5F26A4E8B400CFDC19 /* Models.swift in Sources */,
 				CE7207FE26A6FF9B00687D32 /* StackAction.swift in Sources */,
 				CEE15A5826A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */,
+				CE7C733E26B4B3F8002BE638 /* ScreenFactory.swift in Sources */,
 				CE72083026A99DB600687D32 /* ViewStack.swift in Sources */,
+				CE7C734826B4B95D002BE638 /* TaskInteractor.swift in Sources */,
+				CE7C733226B4AF4F002BE638 /* ProjectsNavigationController.swift in Sources */,
 				CEE15A4326A45F2100CFDC19 /* ContentView.swift in Sources */,
 				CE1152C626ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */,
 				CE72083326A99FDE00687D32 /* StackScreenViewController.swift in Sources */,
@@ -261,15 +344,22 @@
 				CEE15A4226A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */,
 				CEE15A5326A45F2C00CFDC19 /* AppState.swift in Sources */,
 				CEE15A5C26A4E7FB00CFDC19 /* TasksScreen.swift in Sources */,
-				CE72082E26A8CEB200687D32 /* NavigationStackView.swift in Sources */,
+				CE72082E26A8CEB200687D32 /* NavigationController.swift in Sources */,
+				CE7C733026B4AEE1002BE638 /* TasksNavigationController.swift in Sources */,
 				CED4656026B2C320008B8705 /* InboxScreen.swift in Sources */,
-				CEE15A4626A45F2100CFDC19 /* Persistence.swift in Sources */,
-				CE1152C326ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */,
-				CEE15A5626A4D8F900CFDC19 /* DIContainer.swift in Sources */,
+				CE7C733626B4AF58002BE638 /* InboxNavigationController.swift in Sources */,
+				CE1152C326ACBECB0076C4F7 /* NavigationBar.swift in Sources */,
+				CEE15A5626A4D8F900CFDC19 /* Container.swift in Sources */,
+				CE7C733C26B4B1A8002BE638 /* NavigationBarModifier.swift in Sources */,
+				CE7C734626B4B8E7002BE638 /* EnvironmentValues+Extensions.swift in Sources */,
+				CE7C734226B4B8AB002BE638 /* CurrentValueSubject+Extensions.swift in Sources */,
 				CEE15A6026A4E8B400CFDC19 /* Models.swift in Sources */,
 				CE7207FF26A6FF9B00687D32 /* StackAction.swift in Sources */,
 				CEE15A5926A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */,
+				CE7C733F26B4B3F8002BE638 /* ScreenFactory.swift in Sources */,
 				CE72083126A99DB600687D32 /* ViewStack.swift in Sources */,
+				CE7C734926B4B95D002BE638 /* TaskInteractor.swift in Sources */,
+				CE7C733326B4AF4F002BE638 /* ProjectsNavigationController.swift in Sources */,
 				CEE15A4426A45F2100CFDC19 /* ContentView.swift in Sources */,
 				CE1152C726ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */,
 				CE72083426A99FDE00687D32 /* StackScreenViewController.swift in Sources */,

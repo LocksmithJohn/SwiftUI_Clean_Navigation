@@ -11,29 +11,18 @@ import SwiftUI
 class StackScreenViewController: UIHostingController<AnyView> {
     var viewStack: ViewStack
     var type: SType { didSet {
-        rootView = screenFactory(type: type, viewStack: viewStack)
+        rootView = ScreenFactory.make(type: type, viewStack: viewStack)
     } }
 
     init(viewStack: ViewStack, type: SType) {
         self.viewStack = viewStack
         self.type = type
-        super.init(rootView: screenFactory(type: type, viewStack: viewStack))
+        super.init(rootView: ScreenFactory.make(type: type, viewStack: viewStack))
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.title = type.title
     }
     
     required init?(coder aDecoder: NSCoder) { nil }
-}
-
-func screenFactory(type: SType, viewStack: ViewStack) -> AnyView {
-    switch type {
-    case .tasks:
-        return AnyView(TasksScreen().environmentObject(viewStack))
-    case .projects:
-        return AnyView(ProjectsScreen().environmentObject(viewStack))
-    case .inbox:
-        return AnyView(InboxScreen().environmentObject(viewStack))
-    }
 }
 
 class Screen: Equatable {

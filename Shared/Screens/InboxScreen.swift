@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InboxScreen: View {
     @EnvironmentObject var viewStack: ViewStack
-    @Environment(\.injected) private var injected: DIContainer
+    @Environment(\.injected) private var injected: Container
     
     var body: some View {
         VStack {
@@ -17,7 +17,7 @@ struct InboxScreen: View {
                 Text("Dismiss")
             }.buttonStyle(CustomButtonStyle())
         }
-        .modifier(NavigationModifier(
+        .modifier(NavigationBarModifier(
             title: "Inbox",
             rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
             rightButtonAction: { viewStack.send(.push(.projects)) })

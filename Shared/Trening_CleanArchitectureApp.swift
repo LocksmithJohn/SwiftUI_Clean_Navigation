@@ -7,6 +7,8 @@
 import Combine
 import SwiftUI
 
+let container = Container()
+
 @main
 struct Trening_CleanArchitectureApp: App {
     var body: some Scene {
@@ -16,5 +18,3 @@ struct Trening_CleanArchitectureApp: App {
         }
     }
 }
-
-let container = DIContainer()

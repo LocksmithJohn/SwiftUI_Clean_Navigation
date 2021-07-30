@@ -1,5 +1,5 @@
 //
-//  NavigationStackView.swift
+//  TabController.swift
 //  Trening_CleanArchitecture
 //
 //  Created by User on 21/07/2021.
@@ -8,17 +8,32 @@
 import Foundation
 import SwiftUI
 
-struct NavigationStackView: UIViewControllerRepresentable {
-    @EnvironmentObject var viewStack: ViewStack
+protocol NavigationController: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> UINavigationController
+    func updateUIViewController(_ navigationController: UINavigationController, context: Context)
+    func makeCoordinator() -> NavigationStackCoordinator
+    func snapShotStackView(navigationController: UINavigationController, viewStack: ViewStack)
+    func setInitialView()
+    
+}
+
+extension NavigationController {
     
     func makeUIViewController(context: Context) -> UINavigationController {
         let navigationController = UINavigationController()
-        navigationController.delegate = context.coordinator
-
+        if let coordinator = context.coordinator as? UINavigationControllerDelegate {
+            navigationController.delegate = coordinator
+        }
+        setInitialView()
         return navigationController
     }
     
-    func updateUIViewController(_ navigationController: UINavigationController, context: Context) {
+    func makeCoordinator() -> NavigationStackCoordinator {
+        NavigationStackCoordinator()
+    }
+    
+    func snapShotStackView(navigationController: UINavigationController, viewStack: ViewStack) {
         let presentedViewControllers = navigationController.viewControllers
         let newViewControllers = viewStack.screens
             .filter { !$0.isModal }
@@ -38,15 +53,8 @@ struct NavigationStackView: UIViewControllerRepresentable {
         } else {
             navigationController.viewControllers.forEach { $0.dismiss(animated: true) }
         }
-        
     }
     
-    
-    func makeCoordinator() -> NavigationStackCoordinator {
-        NavigationStackCoordinator()//view: self)
-    }
- 
 }
 
-final class NavigationStackCoordinator: NSObject, UINavigationControllerDelegate {
-}
+final class NavigationStackCoordinator: NSObject, UINavigationControllerDelegate {}

@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 enum StackAction {
+    case set([SType])
     case push(SType)
     case pushExisting(SType)
     case pop
     case dismiss
     case present(SType)
-    //  case popToRoot
 }
 
