@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEE15A3F26A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A2E26A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld */; };
-		CEE15A4026A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A2E26A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld */; };
+		CE1152C226ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */; };
+		CE1152C326ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */; };
+		CE1152C626ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */; };
+		CE1152C726ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */; };
+		CE7207FE26A6FF9B00687D32 /* StackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7207FD26A6FF9B00687D32 /* StackAction.swift */; };
+		CE7207FF26A6FF9B00687D32 /* StackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7207FD26A6FF9B00687D32 /* StackAction.swift */; };
+		CE72082D26A8CEB200687D32 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082C26A8CEB200687D32 /* NavigationStackView.swift */; };
+		CE72082E26A8CEB200687D32 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082C26A8CEB200687D32 /* NavigationStackView.swift */; };
+		CE72083026A99DB600687D32 /* ViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082F26A99DB600687D32 /* ViewStack.swift */; };
+		CE72083126A99DB600687D32 /* ViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72082F26A99DB600687D32 /* ViewStack.swift */; };
+		CE72083326A99FDE00687D32 /* StackScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72083226A99FDE00687D32 /* StackScreenViewController.swift */; };
+		CE72083426A99FDE00687D32 /* StackScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72083226A99FDE00687D32 /* StackScreenViewController.swift */; };
+		CED4655F26B2C320008B8705 /* InboxScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4655E26B2C320008B8705 /* InboxScreen.swift */; };
+		CED4656026B2C320008B8705 /* InboxScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4655E26B2C320008B8705 /* InboxScreen.swift */; };
 		CEE15A4126A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */; };
 		CEE15A4226A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */; };
 		CEE15A4326A45F2100CFDC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3126A45F2100CFDC19 /* ContentView.swift */; };
@@ -17,16 +29,38 @@
 		CEE15A4626A45F2100CFDC19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A3226A45F2100CFDC19 /* Persistence.swift */; };
 		CEE15A4726A45F2100CFDC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE15A3326A45F2100CFDC19 /* Assets.xcassets */; };
 		CEE15A4826A45F2100CFDC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE15A3326A45F2100CFDC19 /* Assets.xcassets */; };
+		CEE15A5226A45F2C00CFDC19 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5126A45F2C00CFDC19 /* AppState.swift */; };
+		CEE15A5326A45F2C00CFDC19 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5126A45F2C00CFDC19 /* AppState.swift */; };
+		CEE15A5526A4D8F900CFDC19 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */; };
+		CEE15A5626A4D8F900CFDC19 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */; };
+		CEE15A5826A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5726A4E7F400CFDC19 /* ProjectsScreen.swift */; };
+		CEE15A5926A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5726A4E7F400CFDC19 /* ProjectsScreen.swift */; };
+		CEE15A5B26A4E7FB00CFDC19 /* TasksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5A26A4E7FB00CFDC19 /* TasksScreen.swift */; };
+		CEE15A5C26A4E7FB00CFDC19 /* TasksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5A26A4E7FB00CFDC19 /* TasksScreen.swift */; };
+		CEE15A5F26A4E8B400CFDC19 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5E26A4E8B400CFDC19 /* Models.swift */; };
+		CEE15A6026A4E8B400CFDC19 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE15A5E26A4E8B400CFDC19 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CEE15A2F26A45F2100CFDC19 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		CE7207FD26A6FF9B00687D32 /* StackAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackAction.swift; sourceTree = "<group>"; };
+		CE72082B26A8C0C300687D32 /* Trening-CleanArchitecture--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Trening-CleanArchitecture--iOS--Info.plist"; sourceTree = "<group>"; };
+		CE72082C26A8CEB200687D32 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
+		CE72082F26A99DB600687D32 /* ViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStack.swift; sourceTree = "<group>"; };
+		CE72083226A99FDE00687D32 /* StackScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScreenViewController.swift; sourceTree = "<group>"; };
+		CED4655E26B2C320008B8705 /* InboxScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxScreen.swift; sourceTree = "<group>"; };
 		CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trening_CleanArchitectureApp.swift; sourceTree = "<group>"; };
 		CEE15A3126A45F2100CFDC19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEE15A3226A45F2100CFDC19 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CEE15A3326A45F2100CFDC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEE15A3826A45F2100CFDC19 /* Trening_CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trening_CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE15A3E26A45F2100CFDC19 /* Trening_CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trening_CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE15A5126A45F2C00CFDC19 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		CEE15A5726A4E7F400CFDC19 /* ProjectsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsScreen.swift; sourceTree = "<group>"; };
+		CEE15A5A26A4E7FB00CFDC19 /* TasksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksScreen.swift; sourceTree = "<group>"; };
+		CEE15A5E26A4E8B400CFDC19 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE1152C426ACCF9B0076C4F7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CEE15A5A26A4E7FB00CFDC19 /* TasksScreen.swift */,
+				CEE15A5726A4E7F400CFDC19 /* ProjectsScreen.swift */,
+				CED4655E26B2C320008B8705 /* InboxScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		CEE15A2826A45F2000CFDC19 = {
 			isa = PBXGroup;
 			children = (
+				CE72082B26A8C0C300687D32 /* Trening-CleanArchitecture--iOS--Info.plist */,
 				CEE15A2D26A45F2100CFDC19 /* Shared */,
 				CEE15A3926A45F2100CFDC19 /* Products */,
 			);
@@ -59,10 +104,15 @@
 			isa = PBXGroup;
 			children = (
 				CEE15A3026A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift */,
-				CEE15A3126A45F2100CFDC19 /* ContentView.swift */,
+				CE7207FD26A6FF9B00687D32 /* StackAction.swift */,
+				CE72082F26A99DB600687D32 /* ViewStack.swift */,
+				CE1152C426ACCF9B0076C4F7 /* Screens */,
+				CEE15A5D26A4E80F00CFDC19 /* Other Views */,
+				CEE15A5126A45F2C00CFDC19 /* AppState.swift */,
+				CEE15A5426A4D8F900CFDC19 /* DIContainer.swift */,
 				CEE15A3226A45F2100CFDC19 /* Persistence.swift */,
+				CEE15A5E26A4E8B400CFDC19 /* Models.swift */,
 				CEE15A3326A45F2100CFDC19 /* Assets.xcassets */,
-				CEE15A2E26A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -74,6 +124,18 @@
 				CEE15A3E26A45F2100CFDC19 /* Trening_CleanArchitecture.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CEE15A5D26A4E80F00CFDC19 /* Other Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEE15A3126A45F2100CFDC19 /* ContentView.swift */,
+				CE72083226A99FDE00687D32 /* StackScreenViewController.swift */,
+				CE72082C26A8CEB200687D32 /* NavigationStackView.swift */,
+				CE1152C126ACBECB0076C4F7 /* CustomNavigationBar.swift */,
+				CE1152C526ACD2B30076C4F7 /* CustomButtonStyle.swift */,
+			);
+			path = "Other Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +237,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE15A4126A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */,
+				CEE15A5226A45F2C00CFDC19 /* AppState.swift in Sources */,
+				CEE15A5B26A4E7FB00CFDC19 /* TasksScreen.swift in Sources */,
+				CE72082D26A8CEB200687D32 /* NavigationStackView.swift in Sources */,
+				CED4655F26B2C320008B8705 /* InboxScreen.swift in Sources */,
 				CEE15A4526A45F2100CFDC19 /* Persistence.swift in Sources */,
-				CEE15A3F26A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld in Sources */,
+				CE1152C226ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */,
+				CEE15A5526A4D8F900CFDC19 /* DIContainer.swift in Sources */,
+				CEE15A5F26A4E8B400CFDC19 /* Models.swift in Sources */,
+				CE7207FE26A6FF9B00687D32 /* StackAction.swift in Sources */,
+				CEE15A5826A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */,
+				CE72083026A99DB600687D32 /* ViewStack.swift in Sources */,
 				CEE15A4326A45F2100CFDC19 /* ContentView.swift in Sources */,
+				CE1152C626ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */,
+				CE72083326A99FDE00687D32 /* StackScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,9 +259,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE15A4226A45F2100CFDC19 /* Trening_CleanArchitectureApp.swift in Sources */,
+				CEE15A5326A45F2C00CFDC19 /* AppState.swift in Sources */,
+				CEE15A5C26A4E7FB00CFDC19 /* TasksScreen.swift in Sources */,
+				CE72082E26A8CEB200687D32 /* NavigationStackView.swift in Sources */,
+				CED4656026B2C320008B8705 /* InboxScreen.swift in Sources */,
 				CEE15A4626A45F2100CFDC19 /* Persistence.swift in Sources */,
-				CEE15A4026A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld in Sources */,
+				CE1152C326ACBECB0076C4F7 /* CustomNavigationBar.swift in Sources */,
+				CEE15A5626A4D8F900CFDC19 /* DIContainer.swift in Sources */,
+				CEE15A6026A4E8B400CFDC19 /* Models.swift in Sources */,
+				CE7207FF26A6FF9B00687D32 /* StackAction.swift in Sources */,
+				CEE15A5926A4E7F400CFDC19 /* ProjectsScreen.swift in Sources */,
+				CE72083126A99DB600687D32 /* ViewStack.swift in Sources */,
 				CEE15A4426A45F2100CFDC19 /* ContentView.swift in Sources */,
+				CE1152C726ACD2B30076C4F7 /* CustomButtonStyle.swift in Sources */,
+				CE72083426A99FDE00687D32 /* StackScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,12 +395,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZY5FRQGFT8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Trening-CleanArchitecture--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = Trening_CleanArchitecture;
+				INFOPLIST_KEY_CFBundleName = Trening_CleanArchitecture;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -329,6 +417,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slusarzjan.Trening-CleanArchitecture";
 				PRODUCT_NAME = Trening_CleanArchitecture;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -341,12 +430,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZY5FRQGFT8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Trening-CleanArchitecture--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = Trening_CleanArchitecture;
+				INFOPLIST_KEY_CFBundleName = Trening_CleanArchitecture;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -359,6 +452,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slusarzjan.Trening-CleanArchitecture";
 				PRODUCT_NAME = Trening_CleanArchitecture;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -456,19 +550,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CEE15A2E26A45F2100CFDC19 /* Trening_CleanArchitecture.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CEE15A2F26A45F2100CFDC19 /* Shared.xcdatamodel */,
-			);
-			currentVersion = CEE15A2F26A45F2100CFDC19 /* Shared.xcdatamodel */;
-			path = Trening_CleanArchitecture.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CEE15A2926A45F2000CFDC19 /* Project object */;
 }

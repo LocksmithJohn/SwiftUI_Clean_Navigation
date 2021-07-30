@@ -9,12 +9,11 @@ import Foundation
 import UIKit
 
 enum StackAction {
-//  case set([ScreenType])
-  case push(ScreenType)
-  case pop
-//  case popToRoot
-  // stack item actions:
-//  case root(UUID, RootAction)
-//  case counter(UUID, CounterAction)
+    case push(SType)
+    case pushExisting(SType)
+    case pop
+    case dismiss
+    case present(SType)
+    //  case popToRoot
 }
 

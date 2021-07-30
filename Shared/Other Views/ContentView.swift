@@ -9,13 +9,13 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    let viewStack = ViewStack()
+    let container: DIContainer
     var body: some View {
         
         NavigationStackView()
-            .environmentObject(viewStack)
+            .environmentObject(container.viewStack)
             .onAppear {
-                viewStack.send(.push(.tasks))
+                container.viewStack.send(.push(.tasks))
             }
     }
 }

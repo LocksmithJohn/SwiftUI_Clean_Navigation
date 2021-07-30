@@ -8,24 +8,17 @@
 import SwiftUI
 
 struct ProjectsScreen: View {
+    @Environment(\.injected) private var injected: DIContainer
     @EnvironmentObject var viewStack: ViewStack
     var body: some View {
-            VStack {
-                ScrollView {
-                    Text("ProjectsScreen").padding()
-                    Text("ProjectsScreen").padding()
-                    Text("ProjectsScreen").padding()
-                    Text("ProjectsScreen").padding()
-                    Text("ProjectsScreen").padding()
-                    Text("ProjectsScreen").padding()
-                    Text("ProjectsScreen").padding()
-                    Text("ProjectsScreen").padding()
-
-                Text("ProjectsScreen")
-                Button(action: { viewStack.send(.pop) },
-                       label: { Text("go back") } )
-                }
-            }
+        VStack {
+            Button(action: { viewStack.send(.pop) },
+                   label: { Text("go back") } )
+                .buttonStyle(CustomButtonStyle())
+            Button(action: { viewStack.send(.present(.inbox)) },
+                   label: { Text("Go to Inbox Modal") } )
+                .buttonStyle(CustomButtonStyle())
+        }
         .modifier(NavigationModifier(
             title: "Projekty",
             leftButtonImage: Image(systemName: "arrowshape.turn.up.left"),

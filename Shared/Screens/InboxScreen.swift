@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct InboxScreen: View {
+    @EnvironmentObject var viewStack: ViewStack
+    @Environment(\.injected) private var injected: DIContainer
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct InboxScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        InboxScreen()
+        VStack {
+            Button { viewStack.send(.dismiss) } label: {
+                Text("Dismiss")
+            }.buttonStyle(CustomButtonStyle())
+        }
+        .modifier(NavigationModifier(
+            title: "Inbox",
+            rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
+            rightButtonAction: { viewStack.send(.push(.projects)) })
+        )
+        .onDisappear {
+            viewStack.send(.dismiss)
+        }
     }
 }

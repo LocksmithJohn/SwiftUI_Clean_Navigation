@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Project: Equatable {
+    var name: String? = nil
+    var description: String? = nil
+    var priority: Int? = nil
+}
+
+struct Task: Equatable {
+    var name: String? = nil
+    var subtitle: String = ""
+    var priority: Int? = nil
+}

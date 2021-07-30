@@ -40,7 +40,6 @@ struct CustomNavigationBar: View {
         }
 
         .frame(height: Constants.height)
-        .background(Color.gray.opacity(0.3))
     }
 }
 
@@ -72,6 +71,7 @@ struct NavigationModifier: ViewModifier {
                                 leftButtonAction: leftButtonAction,
                                 rightButtonImage: rightButtonImage,
                                 rightButtonAction: rightButtonAction)
+            Spacer()
             content
                 .navigationBarBackButtonHidden(true)
                 .navigationBarHidden(true)

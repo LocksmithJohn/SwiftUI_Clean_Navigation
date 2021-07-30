@@ -5,49 +5,46 @@
 //  Created by User on 19/07/2021.
 //
 
+import Combine
 import SwiftUI
 
 struct TasksScreen: View {
+    
     @EnvironmentObject var viewStack: ViewStack
+    @Environment(\.injected) private var injected: DIContainer
+    @State var tasksNames: [String] = []
+    
+    private var bag = Set<AnyCancellable>()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Button {
-                    viewStack.send(.push(.projects))
+        VStack {
+            List {
+                ForEach(tasksNames, id: \.self) { task in
+                    Text(task)
                 }
-            label: {
-                Spacer()
-                Text("Action 1")
-                Spacer()
             }
-            .padding()
-            .background(Color.green)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-                Button { print("") }
-            label: {
-                Spacer()
-                Text("Action 2")
-                Spacer()
-            }
-            .padding()
-            .background(Color.green)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-                
-            }
-            .font(.headline)
-            .padding()
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarHidden(true)
+            Button { viewStack.send(.push(.projects)) } label: {
+                Text("Go to Projects")
+            }.buttonStyle(CustomButtonStyle())
+            Button {
+                let task = Task(name: "nowy task", priority: 3)
+                injected.taskInteractor.add(task: task)
+            } label: {
+                Text("Add Task")
+            }.buttonStyle(CustomButtonStyle())
         }
+        .font(.headline)
+        .padding()
         .modifier(NavigationModifier(
             title: "Taski",
             rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
             rightButtonAction: { viewStack.send(.push(.projects)) })
         )
-
+        .onReceive(tasksPublisher, perform: { tasksNames = $0.map { $0.name ?? "-" } } )
+    }
+    
+    private var tasksPublisher: AnyPublisher<[Task], Never> {
+        injected.appState.tasksSubject.eraseToAnyPublisher()
     }
 }
 

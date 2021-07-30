@@ -14,46 +14,38 @@ struct NavigationStackView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UINavigationController {
         let navigationController = UINavigationController()
         navigationController.delegate = context.coordinator
-        navigationController.isNavigationBarHidden = true
-        navigationController.navigationBar.isHidden = true
-        navigationController.setNavigationBarHidden(true, animated: false)
-        navigationController.navigationBar.barTintColor = .red
-        navigationController.navigationBar.tintColor = .green
-        navigationController.navigationBar.backgroundColor = .orange
 
         return navigationController
     }
     
     func updateUIViewController(_ navigationController: UINavigationController, context: Context) {
         let presentedViewControllers = navigationController.viewControllers
-        let newViewControllers = viewStack.screens.map { screenType -> UIViewController in
+        let newViewControllers = viewStack.screens
+            .filter { !$0.isModal }
+            .map { screen -> UIViewController in
             let viewController = presentedViewControllers.first {
-                $0.title == screenType.title
+                $0.title == screen.type.title
             }
-            print("filter viewController.first: \(viewController)")
-            let newVC = StackScreenViewController(viewStack: viewStack, type: screenType)
-            print("filter newVC: \(newVC)")
-
-            return viewController ?? newVC// tutaj powininen wjechac viewStack jako parametr
+            let newVC = StackScreenViewController(viewStack: viewStack, type: screen.type)
+            return viewController ?? newVC
         }
-        print("filter viewStack.screens: \(viewStack.screens.map { $0.title })")
-        print("filter newViewControllers: \(newViewControllers.map { $0.title })")
-//        let animate = !navigationController.viewControllers.isEmpty///
-        print("filter vcs: \(navigationController.viewControllers.map { $0.title })")
-        navigationController.setViewControllers(newViewControllers, animated: true)
-        navigationController.isNavigationBarHidden = true
-        navigationController.navigationBar.isHidden = true
         
-        navigationController.navigationBar.tintColor = .yellow
-        navigationController.navigationBar.backgroundColor = .purple
-        navigationController.setNavigationBarHidden(true, animated: false)
-
+        navigationController.setViewControllers(newViewControllers, animated: true)
+        
+        if let screen = viewStack.screens.first(where: { $0.isModal }) {
+            let modalVC = StackScreenViewController(viewStack: viewStack, type: screen.type)
+            navigationController.viewControllers.last?.present(modalVC, animated: true)
+        } else {
+            navigationController.viewControllers.forEach { $0.dismiss(animated: true) }
+        }
+        
     }
     
     
     func makeCoordinator() -> NavigationStackCoordinator {
         NavigationStackCoordinator()//view: self)
     }
+ 
 }
 
 final class NavigationStackCoordinator: NSObject, UINavigationControllerDelegate {
