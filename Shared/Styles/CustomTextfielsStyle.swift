@@ -13,7 +13,7 @@ struct CustomTextfielsStyle: TextFieldStyle {
         configuration
             .frame(width: 300)
             .padding()
-            .foregroundColor(.black)
+//            .foregroundColor(.black)
             .cornerRadius(10)
             .font(.system(size: 30))
     }

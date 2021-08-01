@@ -7,9 +7,17 @@
 
 import SwiftUI
 
-struct InputDetailsScreen: View {
+struct InputDetailsScreen: MyView {
+    
+    @EnvironmentObject var router: Router
+    var type = SType.inputDetails
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }.modifier(NavigationBarModifier(type.title,
+                                         leftButtonImage: Image(systemName: "arrowshape.turn.up.backward"),
+                                         leftButtonAction: { router.pop() }))
     }
 }
 

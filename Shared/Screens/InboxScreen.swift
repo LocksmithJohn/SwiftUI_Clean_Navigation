@@ -18,16 +18,11 @@ struct InboxScreen: MyView {
             Button {
                 router.route(from: type)
             } label: {
-                Text("Dismiss")
+                Text("Go to Input details")
             }.buttonStyle(CustomButtonStyle())
+                .padding(.bottom, 16)
         }
-        .modifier(NavigationBarModifier(
-            title: "Inbox",
-            rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
-            rightButtonAction: { router.route(from: type) })
-        )
-        .onDisappear {
-            router.hideModal()
-        }
+        .modifier(NavigationBarModifier(type.title))
+//        .onDisappear { router.hideModal() }
     }
 }

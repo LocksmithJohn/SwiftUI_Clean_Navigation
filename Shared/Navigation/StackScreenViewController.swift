@@ -57,11 +57,11 @@ enum SType {
         case .inbox:
             return "Inbox"
         case .taskDetails:
-            return nil
+            return "Task details"
         case .projectDetails:
-            return nil
+            return "Project details"
         case .inputDetails:
-            return nil
+            return "Input details"
         }
     }
 }

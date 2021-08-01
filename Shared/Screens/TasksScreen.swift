@@ -29,16 +29,9 @@ struct TasksScreen: MyView {
             List {
                 ForEach(tasksNames, id: \.self) { task in
                     Text(task)
-                        .foregroundColor(.black)
-                        .background(Color.white)
-                        .listRowBackground(Color.white)
                 }
-                .listRowBackground(Color.white)
 
-                .background(Color.white)
-            }.background(Color.white)
-                .listRowBackground(Color.white)
-            Spacer().background(Color.white)
+            }
             TextField("new task", text: $newTask)
                 .textFieldStyle(CustomTextfielsStyle())
             Button {
@@ -46,25 +39,21 @@ struct TasksScreen: MyView {
                 injected.taskInteractor.add(task: task)
             } label: {
                 Text("Add Task")
-            }.buttonStyle(CustomButtonStyle())
-            Button {
-                router.route(from: type)
-            } label: {
+            }.buttonStyle(CustomButtonStyle(color: .green))
+            Button { router.route(from: type) } label: {
                 Text("Next")
-            }.buttonStyle(CustomButtonStyle())
+            }
+            .buttonStyle(CustomButtonStyle())
+            .padding(.bottom, 16)
         }
-        .modifier(NavigationBarModifier(
-            title: "Taski",
-            rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
-            rightButtonAction: { router.route(from: type) })
-        )
+        .modifier(NavigationBarModifier(type.title))
         .onReceive(tasksPublisher, perform: { tasksNames = $0.map { $0.name ?? "-" } } )
-        .background(Color.white)
     }
     
     private var tasksPublisher: AnyPublisher<[Task], Never> {
         injected.appState.tasksSubject
             .eraseToAnyPublisher()
     }
+    
 }
 

@@ -64,20 +64,33 @@ class Router: ObservableObject {
         print("filter     -----------------")
     }
     
+    func pop() {
+        send(.pop)
+    }
+    
     
     func route(from type: SType?, strategy: Strategy = .first) {
         switch type {
-        case .none where strategy == .first: // initial inbox
-            send(.push(.inbox))
-        case .none where strategy == .second: // initial tasks
-            send(.push(.tasks))
-        case .none where strategy == .third: // initial projects
-            send(.push(.projects))
             
+        // MARK: - initial tab bar screens
+        case .none where strategy == .first: // initial inbox
+            send(.set([.inbox]))
+        case .none where strategy == .second: // initial tasks
+            send(.set([.tasks]))
+        case .none where strategy == .third: // initial projects
+            send(.set([.projects]))
+            
+            // MARK: - Inbox screens flow
         case .inbox where strategy == .first:
-            send(.push(.tasks))
+            send(.push(.inputDetails))
+            
+            // MARK: - Tasks screens flow
         case .tasks where strategy == .first:
-            send(.push(.projects))
+            send(.push(.taskDetails))
+            
+            // MARK: - Projects screens flow
+        case .projects where strategy == .first:
+            send(.push(.projectDetails))
         default: break
         }
     }

@@ -15,7 +15,7 @@ struct NavigationBarModifier: ViewModifier {
     let rightButtonImage: Image?
     let rightButtonAction: (() -> Void)?
     
-    init(title: String? = nil,
+    init(_ title: String? = nil,
          leftButtonImage: Image? = nil,
          leftButtonAction: (() -> Void)? = nil,
          rightButtonImage: Image? = nil,

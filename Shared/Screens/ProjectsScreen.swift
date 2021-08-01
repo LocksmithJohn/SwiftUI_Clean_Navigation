@@ -25,18 +25,13 @@ struct ProjectsScreen: MyView {
             }
             Button(action: { injected.projectsInteractor.add(project: Project(name: "project", description: "project desc", tasks: [Task(name: "task in project", subtitle: "", parentProject: "")]) ) },
                    label: { Text("Add project") } )
-                .buttonStyle(CustomButtonStyle())
+                .buttonStyle(CustomButtonStyle(color: .green))
             Button(action: { router.route(from: type) },
-                   label: { Text("Go to Inbox Modal") } )
+                   label: { Text("Project details") } )
                 .buttonStyle(CustomButtonStyle())
+                .padding(.bottom, 16)
         }
-        .modifier(NavigationBarModifier(
-            title: "Projekty",
-            leftButtonImage: Image(systemName: "arrowshape.turn.up.left"),
-            leftButtonAction: { router.route(from: type) },
-            rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
-            rightButtonAction: { router.route(from: type) })
-        )
+        .modifier(NavigationBarModifier(type.title))
         .onReceive(projectsPublisher) { projectsNames = $0.map { $0.name ?? "-" } }
     }
     

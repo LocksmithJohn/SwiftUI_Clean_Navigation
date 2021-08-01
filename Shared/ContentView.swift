@@ -31,6 +31,5 @@ struct ContentView: View {
                     Text("Projects")
                 }.tag(1)
         }
-        .background(Color.white)
     }
 }
