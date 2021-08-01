@@ -9,15 +9,15 @@ import Foundation
 import SwiftUI
 
 class StackScreenViewController: UIHostingController<AnyView> {
-    var viewStack: ViewStack
+    var router: Router
     var type: SType { didSet {
-        rootView = ScreenFactory.make(type: type, viewStack: viewStack)
+        rootView = ScreenFactory.make(type: type, router: router)
     } }
 
-    init(viewStack: ViewStack, type: SType) {
-        self.viewStack = viewStack
+    init(router: Router, type: SType) {
+        self.router = router
         self.type = type
-        super.init(rootView: ScreenFactory.make(type: type, viewStack: viewStack))
+        super.init(rootView: ScreenFactory.make(type: type, router: router))
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.title = type.title
     }
@@ -42,17 +42,26 @@ class Screen: Equatable {
 
 enum SType {
     case tasks
+    case taskDetails
     case projects
+    case projectDetails
     case inbox
+    case inputDetails
     
-    var title: String {
+    var title: String? {
         switch self {
         case .tasks:
-            return "Zadania"
+            return "Tasks"
         case .projects:
-            return "Projekty"
+            return "Projects"
         case .inbox:
             return "Inbox"
+        case .taskDetails:
+            return nil
+        case .projectDetails:
+            return nil
+        case .inputDetails:
+            return nil
         }
     }
 }

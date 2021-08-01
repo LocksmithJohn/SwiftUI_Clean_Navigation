@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol TaskInteractorProtocol {
+protocol TasksInteractorProtocol {
     func add(task: Task)
 }
 
-class TaskInteractor: TaskInteractorProtocol {
+class TasksInteractor: TasksInteractorProtocol {
     
     var appState: AppState
     
@@ -20,7 +20,7 @@ class TaskInteractor: TaskInteractorProtocol {
     }
     
     func add(task: Task) {
-        appState.tasks.append(task)
+        appState.addTask(task)
     }
     
 }

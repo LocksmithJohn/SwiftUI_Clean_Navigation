@@ -13,7 +13,7 @@ protocol NavigationController: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UINavigationController
     func updateUIViewController(_ navigationController: UINavigationController, context: Context)
     func makeCoordinator() -> NavigationStackCoordinator
-    func snapShotStackView(navigationController: UINavigationController, viewStack: ViewStack)
+    func snapShotStackView(navigationController: UINavigationController, router: Router)
     func setInitialView()
     
 }
@@ -33,22 +33,22 @@ extension NavigationController {
         NavigationStackCoordinator()
     }
     
-    func snapShotStackView(navigationController: UINavigationController, viewStack: ViewStack) {
+    func snapShotStackView(navigationController: UINavigationController, router: Router) {
         let presentedViewControllers = navigationController.viewControllers
-        let newViewControllers = viewStack.screens
+        let newViewControllers = router.screens
             .filter { !$0.isModal }
             .map { screen -> UIViewController in
             let viewController = presentedViewControllers.first {
                 $0.title == screen.type.title
             }
-            let newVC = StackScreenViewController(viewStack: viewStack, type: screen.type)
+            let newVC = StackScreenViewController(router: router, type: screen.type)
             return viewController ?? newVC
         }
         
         navigationController.setViewControllers(newViewControllers, animated: true)
         
-        if let screen = viewStack.screens.first(where: { $0.isModal }) {
-            let modalVC = StackScreenViewController(viewStack: viewStack, type: screen.type)
+        if let screen = router.screens.first(where: { $0.isModal }) {
+            let modalVC = StackScreenViewController(router: router, type: screen.type)
             navigationController.viewControllers.last?.present(modalVC, animated: true)
         } else {
             navigationController.viewControllers.forEach { $0.dismiss(animated: true) }

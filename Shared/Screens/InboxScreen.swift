@@ -7,23 +7,27 @@
 
 import SwiftUI
 
-struct InboxScreen: View {
-    @EnvironmentObject var viewStack: ViewStack
+struct InboxScreen: MyView {
+    var type = SType.inbox
+    
+    @EnvironmentObject var router: Router
     @Environment(\.injected) private var injected: Container
     
     var body: some View {
         VStack {
-            Button { viewStack.send(.dismiss) } label: {
+            Button {
+                router.route(from: type)
+            } label: {
                 Text("Dismiss")
             }.buttonStyle(CustomButtonStyle())
         }
         .modifier(NavigationBarModifier(
             title: "Inbox",
             rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
-            rightButtonAction: { viewStack.send(.push(.projects)) })
+            rightButtonAction: { router.route(from: type) })
         )
         .onDisappear {
-            viewStack.send(.dismiss)
+            router.hideModal()
         }
     }
 }

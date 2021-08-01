@@ -5,27 +5,44 @@
 //  Created by User on 19/07/2021.
 //
 
+import Combine
 import SwiftUI
 
-struct ProjectsScreen: View {
+struct ProjectsScreen: MyView {
+    var type = SType.projects
+    
     @Environment(\.injected) private var injected: Container
-    @EnvironmentObject var viewStack: ViewStack
+    @EnvironmentObject var router: Router
+    
+    @State var projectsNames = [String]()
+    
     var body: some View {
         VStack {
-            Button(action: { viewStack.send(.pop) },
-                   label: { Text("go back") } )
+            List {
+                ForEach(projectsNames, id: \.self) { task in
+                    Text(task)
+                }
+            }
+            Button(action: { injected.projectsInteractor.add(project: Project(name: "project", description: "project desc", tasks: [Task(name: "task in project", subtitle: "", parentProject: "")]) ) },
+                   label: { Text("Add project") } )
                 .buttonStyle(CustomButtonStyle())
-            Button(action: { viewStack.send(.present(.inbox)) },
+            Button(action: { router.route(from: type) },
                    label: { Text("Go to Inbox Modal") } )
                 .buttonStyle(CustomButtonStyle())
         }
         .modifier(NavigationBarModifier(
             title: "Projekty",
             leftButtonImage: Image(systemName: "arrowshape.turn.up.left"),
-            leftButtonAction: { viewStack.send(.pop) },
+            leftButtonAction: { router.route(from: type) },
             rightButtonImage: Image(systemName: "arrow.clockwise.heart"),
-            rightButtonAction: { viewStack.send(.push(.tasks)) })
+            rightButtonAction: { router.route(from: type) })
         )
+        .onReceive(projectsPublisher) { projectsNames = $0.map { $0.name ?? "-" } }
+    }
+    
+    private var projectsPublisher: AnyPublisher<[Project], Never> {
+        injected.appState.projectsSubject
+            .eraseToAnyPublisher()
     }
 }
 

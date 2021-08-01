@@ -9,14 +9,14 @@ import SwiftUI
 
 struct InboxNavigationController: NavigationController {
     
-    @EnvironmentObject var viewStack: ViewStack
+    @EnvironmentObject var router: Router
 
     func updateUIViewController(_ navigationController: UINavigationController, context: Context) {
-        snapShotStackView(navigationController: navigationController, viewStack: viewStack)
+        snapShotStackView(navigationController: navigationController, router: router)
     }
     
     func setInitialView() {
-        viewStack.send(.set([.inbox]))
+        router.setInitial(.inbox)
     }
  
 }

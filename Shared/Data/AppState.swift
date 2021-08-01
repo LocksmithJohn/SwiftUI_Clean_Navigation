@@ -8,10 +8,24 @@
 import Combine
 import Foundation
 
-struct AppState {
+class AppState {
+    
+    // AppState should be composed to different subcontext like screens in the future
     
     var tasksSubject: CurrentValueSubject<[Task], Never> = CurrentValueSubject([])
-    var projects = [Project]()
-    var tasks: [Task] = [] { didSet { tasksSubject.send(tasks) }}
+    var projectsSubject: CurrentValueSubject<[Project], Never> = CurrentValueSubject([])
+
+    private var projects = [Project]()  { didSet { projectsSubject.send(projects) }}
+    private var tasks: [Task] = [] { didSet { tasksSubject.send(tasks) }}
+    
+    private var bags = Set<AnyCancellable>()
+    
+    func addTask(_ task: Task) {
+        tasks.append(task)
+    }
+    
+    func addProject(_ project: Project) {
+        projects.append(project)
+    }
     
 }

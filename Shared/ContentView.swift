@@ -13,23 +13,24 @@ struct ContentView: View {
     var body: some View {
         TabView {
             InboxNavigationController()
-                .environmentObject(container.viewStackInbox)
+                .environmentObject(container.routerInbox)
                 .tabItem {
                     Image(systemName: "1.circle")
                     Text("Inbox")
                 }.tag(1)
             TasksNavigationController()
-                .environmentObject(container.viewStackTasks)
+                .environmentObject(container.routerTasks)
                 .tabItem {
                     Image(systemName: "2.circle")
                     Text("Tasks")
                 }.tag(2)
             ProjectsNavigationController()
-                .environmentObject(container.viewStackProjects)
+                .environmentObject(container.routerProjects)
                 .tabItem {
                     Image(systemName: "3.circle")
                     Text("Projects")
                 }.tag(1)
         }
+        .background(Color.white)
     }
 }

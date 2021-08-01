@@ -7,13 +7,13 @@
 
 import Foundation
 
-class ViewStack: ObservableObject {
+class Router: ObservableObject {
     
     @Published private (set) var screens: [Screen] = [] {
         didSet { printStactInfo() }
     }
-    
-    func send(_ action: StackAction) {
+        
+    private func send(_ action: StackAction) {
         switch action {
         case .set(let types):
             screens.removeAll()
@@ -57,11 +57,37 @@ class ViewStack: ObservableObject {
     }
     
     private func printStactInfo() {
-        print("filter   ----ViewStack----")
+        print("filter     ----Screens----")
         screens.reversed().forEach {
-            print("filter   |screen: \($0.type.title) \($0.isModal ? "is Modal" : "")")
+            print("filter     |screen: \($0.type.title) \($0.isModal ? "is Modal" : "")")
         }
-        print("filter   -----------------")
+        print("filter     -----------------")
+    }
+    
+    
+    func route(from type: SType?, strategy: Strategy = .first) {
+        switch type {
+        case .none where strategy == .first: // initial inbox
+            send(.push(.inbox))
+        case .none where strategy == .second: // initial tasks
+            send(.push(.tasks))
+        case .none where strategy == .third: // initial projects
+            send(.push(.projects))
+            
+        case .inbox where strategy == .first:
+            send(.push(.tasks))
+        case .tasks where strategy == .first:
+            send(.push(.projects))
+        default: break
+        }
+    }
+    
+    func setInitial(_ type: SType) {
+        send(.push(type))
+    }
+    
+    func hideModal() {
+        send(.dismiss)
     }
     
 }

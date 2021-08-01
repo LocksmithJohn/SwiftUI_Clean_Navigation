@@ -11,17 +11,21 @@ import SwiftUI
 struct Container: EnvironmentKey {
     
     let appState = AppState()
-    let taskInteractor: TaskInteractor
-    let viewStackInbox = ViewStack()
-    let viewStackTasks = ViewStack()
-    let viewStackProjects = ViewStack()
+    
+    let taskInteractor: TasksInteractor
+    let projectsInteractor: ProjectsInteractor
+
+    let routerInbox = Router()
+    let routerTasks = Router()
+    let routerProjects = Router()
     
     static var defaultValue: Self {
         Self()
     }
 
     init() {
-        self.taskInteractor = TaskInteractor(appstate: appState)
+        self.taskInteractor = TasksInteractor(appstate: appState)
+        self.projectsInteractor = ProjectsInteractor(appstate: appState)
     }
     
 }
